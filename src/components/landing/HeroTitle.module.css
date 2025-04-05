@@ -1,0 +1,10 @@
+.HeroTitle {
+  width: 247px;
+  height: 57px;
+  @media only screen and (min-width: 576px) {
+    width: 428px;
+    height: 100px;
+  }
+  background: url(/landing/title_index.png) no-repeat;
+  background-size: 100%;
+}

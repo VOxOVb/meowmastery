@@ -1,0 +1,11 @@
+.CTAButton {
+  width: 195px;
+  height: 65px;
+  @media only screen and (min-width: 576px) {
+    width: 234px;
+    height: 79px;
+  }
+  margin-bottom: 1rem;
+  background: url(/landing/btn_index_bg.png) no-repeat;
+  background-size: 100%;
+}

@@ -1,0 +1,10 @@
+.HeroVisual {
+  width: 390px;
+  height: 200px;
+  @media only screen and (min-width: 576px) {
+    width: 576px;
+    height: 280px;
+  }
+  background: url(/landing/cat-00.png) no-repeat;
+  background-size: 100%;
+}

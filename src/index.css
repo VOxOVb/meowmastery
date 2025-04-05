@@ -29,6 +29,11 @@
   user-select: none;
 }
 
+body {
+  background-color: var(--bg-color);
+  background-image: url(/bgline.png);
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -76,4 +81,11 @@ input {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+p {
+  color: #444;
+  font-family: FakePearl-Regular;
+  font-weight: 400;
+  text-align: center;
 }
