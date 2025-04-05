@@ -9,6 +9,17 @@
   background: url(/landing/btn_index_bg.png) no-repeat;
   background-size: 100%;
   animation: blink 4s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.2s;
+  &:hover {
+    background: url(/landing/btn_index_hover.png) no-repeat;
+    background-size: 100%;
+    transform: translate(-3px, -3px);
+    transition: transform 0.2s;
+  }
+}
+
+.isActive {
+  animation: isActive 0.66s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 @keyframes blink {
@@ -32,5 +43,29 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes isActive {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

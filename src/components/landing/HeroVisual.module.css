@@ -8,7 +8,7 @@
   z-index: -1;
   background: url(/landing/cat-00.png) no-repeat;
   background-size: 100%;
-  animation: fadein 3.5s ease;
+  animation: fadein 4s ease;
 }
 
 @keyframes fadein {
