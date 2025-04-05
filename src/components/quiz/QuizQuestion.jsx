@@ -1,11 +1,19 @@
 import styles from "./QuizQuestion.module.css";
+import useQuiz from "../../hooks/useQuiz";
 
 export default function QuizQuestion() {
+  const { questions, index } = useQuiz();
   return (
-    <div className={styles.QuizQuestion}>
-      <div className={styles.context}>
-        <p>喵星人踏踏...</p>
-      </div>
-    </div>
+    <>
+      {questions.length > 0 && index < questions.length ? (
+        <div className={styles.QuizQuestion} key={index}>
+          <div className={styles.context}>
+            <p>{questions.at(index).question}</p>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.magic}></div>
+      )}
+    </>
   );
 }

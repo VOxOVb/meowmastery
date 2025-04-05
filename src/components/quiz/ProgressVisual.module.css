@@ -12,16 +12,19 @@
 .step1 {
   background: url(/quiz/cat-01.png) no-repeat;
   background-size: 100%;
+  animation: show 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .step2 {
   background: url(/quiz/cat-02.png) no-repeat;
   background-size: 100%;
+  animation: show 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .step3 {
   background: url(/quiz/cat-03.png) no-repeat;
   background-size: 100%;
+  animation: show 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 @keyframes show {

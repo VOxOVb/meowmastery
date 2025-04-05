@@ -3,7 +3,7 @@ import { questionMerge, questionPick } from "../questions";
 
 const QuizContext = createContext();
 const initialState = {
-  status: "quiz",
+  status: "landing",
   questions: [],
   index: 0,
   answers: [],
@@ -15,7 +15,18 @@ function reducer(state, action) {
       return {
         ...state,
         status: "quiz",
-        answers: questionPick(questionMerge, 10),
+        questions: questionPick(questionMerge, 10),
+      };
+    case "nextQuestion":
+      return {
+        ...state,
+        index: state.index + 1,
+        answers: [...state.answers, action.payload],
+      };
+    case "quizEnd":
+      return {
+        ...state,
+        status: "quizEnd",
       };
   }
 }

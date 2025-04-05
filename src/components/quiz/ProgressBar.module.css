@@ -30,7 +30,7 @@
   border: solid 0.15rem transparent;
   border-radius: 1rem 0 0 1rem;
   background-color: var(--highline-color);
-  transition: width 1s ease-in-out;
+  transition: width 0.7s ease-in-out;
 }
 
 .pin {
@@ -46,13 +46,13 @@
   }
   background: url(/quiz/bar-icon.png) no-repeat;
   background-size: 100%;
-  transition: right 1s ease-in-out;
+  transition: right 0.7s ease-in-out;
 }
 .bigger {
   animation: bigger 0.7s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .rotate {
-  animation: rotate 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+  animation: rotate 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 @keyframes beWide {
