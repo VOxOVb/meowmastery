@@ -5,6 +5,20 @@
     width: 576px;
     height: 280px;
   }
+  z-index: -1;
   background: url(/landing/cat-00.png) no-repeat;
   background-size: 100%;
+  animation: fadein 3.5s ease;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

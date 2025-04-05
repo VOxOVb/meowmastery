@@ -8,4 +8,29 @@
   margin-bottom: 1rem;
   background: url(/landing/btn_index_bg.png) no-repeat;
   background-size: 100%;
+  animation: blink 4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

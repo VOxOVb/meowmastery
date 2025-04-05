@@ -8,4 +8,29 @@
   margin-bottom: 1rem;
   background: url(/landing/subtitle_index.png) no-repeat;
   background-size: 100%;
+  animation: showout 2.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@keyframes showout {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

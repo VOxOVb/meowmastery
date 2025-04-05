@@ -4,4 +4,14 @@
   line-height: 1.8rem;
   margin-top: -1.5rem;
   margin-bottom: 2.5rem;
+  animation: slideup 3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(60vh);
+  }
+  60% {
+    transform: translateY(60vh);
+  }
 }
