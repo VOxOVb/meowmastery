@@ -1,0 +1,90 @@
+.ProgressBar {
+  position: relative;
+  width: 225px;
+  height: 10px;
+  @media only screen and (min-width: 576px) {
+    width: 450px;
+    height: 16px;
+  }
+}
+
+.bar {
+  box-sizing: content-box;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  @media only screen and (min-width: 576px) {
+    width: inherit;
+  }
+  border: dashed 0.15rem var(--highline-color);
+  border-radius: 1rem;
+  background-color: var(--highline-color-40);
+  animation: beWide 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.progress {
+  width: 1px;
+  box-sizing: content-box;
+  position: absolute;
+  height: inherit;
+  border: solid 0.15rem transparent;
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--highline-color);
+  transition: width 1s ease-in-out;
+}
+
+.pin {
+  position: absolute;
+  width: 40px;
+  height: 37px;
+  top: -14px;
+  right: -25px;
+  @media only screen and (min-width: 576px) {
+    top: -20px;
+    width: 65px;
+    height: 56px;
+  }
+  background: url(/quiz/bar-icon.png) no-repeat;
+  background-size: 100%;
+  transition: right 1s ease-in-out;
+}
+.bigger {
+  animation: bigger 0.7s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.rotate {
+  animation: rotate 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes beWide {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes bigger {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

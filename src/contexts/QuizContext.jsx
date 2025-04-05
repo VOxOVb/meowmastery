@@ -1,8 +1,9 @@
 import { createContext, useReducer } from "react";
+import { questionMerge, questionPick } from "../questions";
 
 const QuizContext = createContext();
 const initialState = {
-  status: "landing",
+  status: "quiz",
   questions: [],
   index: 0,
   answers: [],
@@ -11,7 +12,11 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "quiz":
-      return { ...state, status: "quiz" };
+      return {
+        ...state,
+        status: "quiz",
+        answers: questionPick(questionMerge, 10),
+      };
   }
 }
 

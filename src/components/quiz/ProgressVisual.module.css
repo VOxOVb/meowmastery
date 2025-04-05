@@ -1,0 +1,37 @@
+.ProgressVisual {
+  width: 390px;
+  height: 200px;
+  @media only screen and (min-width: 576px) {
+    width: 576px;
+    height: 280px;
+  }
+  z-index: -1;
+  animation: show 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.step1 {
+  background: url(/quiz/cat-01.png) no-repeat;
+  background-size: 100%;
+}
+
+.step2 {
+  background: url(/quiz/cat-02.png) no-repeat;
+  background-size: 100%;
+}
+
+.step3 {
+  background: url(/quiz/cat-03.png) no-repeat;
+  background-size: 100%;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
