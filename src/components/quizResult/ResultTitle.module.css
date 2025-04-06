@@ -1,0 +1,7 @@
+.ResultTitle {
+  width: 193px;
+  height: 28px;
+  background-image: url(/quizResult/title_result.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

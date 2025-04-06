@@ -1,0 +1,48 @@
+.ButtonBox {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  @media only screen and (min-width: 576px) {
+    gap: 32px;
+  }
+}
+
+.btnPreview,
+.btnTryAgain {
+  height: 46px;
+  width: 147px;
+  @media only screen and (min-width: 576px) {
+    height: 79px;
+    width: 234px;
+    transition: transform 0.2s;
+  }
+}
+
+.btnPreview {
+  background: url(/quizResult/btn_result.png) no-repeat;
+  background-size: 100%;
+  transition: background 0.2s;
+  &:hover {
+    background: url(/quizResult/btn_result_hover.png) no-repeat;
+    background-size: 100%;
+  }
+  &:active {
+    background: url(/quizResult/btn_result_active.png) no-repeat;
+    background-size: 100%;
+  }
+}
+
+.btnTryAgain {
+  background: url(/quizResult/btn_highline.png) no-repeat;
+  background-size: 100%;
+  transition: background 0.2s;
+  &:hover {
+    background: url(/quizResult/btn_highline_hover.png) no-repeat;
+    background-size: 100%;
+  }
+  &:active {
+    background: url(/quizResult/btn_highline_active.png) no-repeat;
+    background-size: 100%;
+  }
+}

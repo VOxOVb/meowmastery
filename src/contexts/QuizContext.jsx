@@ -1,5 +1,8 @@
 import { createContext, useReducer } from "react";
 import { questionMerge, questionPick } from "../questions";
+import { randomNickname } from "../utils/randomNickname";
+import { caculateScore } from "../utils/caculateScore";
+import { generateModal } from "../utils/generateModal";
 
 const QuizContext = createContext();
 const initialState = {
@@ -7,6 +10,8 @@ const initialState = {
   questions: [],
   index: 0,
   answers: [],
+  score: 0,
+  modal: "",
   selectedPhoto: 0,
   uploaded: null,
   nickname: "",
@@ -30,6 +35,8 @@ function reducer(state, action) {
       return {
         ...state,
         status: "quizEnd",
+        score: caculateScore(state.answers),
+        modal: generateModal(caculateScore(state.answers)),
       };
     case "select":
       return {
@@ -43,14 +50,35 @@ function reducer(state, action) {
       };
     case "nickname":
       return { ...state, nickname: action.payload };
-    case "result":
-      return { ...state, status: "result" };
+    case "quizResult":
+      return {
+        ...state,
+        status: "quizResult",
+        nickname: state.nickname === "" ? randomNickname : state.nickname,
+      };
+    case "preview":
+      return {
+        ...state,
+        status: "preview",
+      };
+    case "tryAgain":
+      return initialState;
   }
 }
 
 function QuizProvider({ children }) {
   const [
-    { status, questions, index, answers, selectedPhoto, nickname, uploaded },
+    {
+      status,
+      questions,
+      index,
+      answers,
+      score,
+      modal,
+      selectedPhoto,
+      nickname,
+      uploaded,
+    },
     dispatch,
   ] = useReducer(reducer, initialState);
   return (
@@ -60,6 +88,8 @@ function QuizProvider({ children }) {
         questions,
         index,
         answers,
+        score,
+        modal,
         dispatch,
         selectedPhoto,
         nickname,

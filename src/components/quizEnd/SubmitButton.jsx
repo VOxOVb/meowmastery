@@ -4,7 +4,7 @@ export default function SubmitButton() {
   const { dispatch } = useQuiz();
 
   function handleSubmit() {
-    dispatch({ type: "result" });
+    dispatch({ type: "quizResult" });
   }
 
   return (
