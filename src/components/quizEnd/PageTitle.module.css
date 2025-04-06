@@ -1,0 +1,29 @@
+.PageTitle {
+  width: 193px;
+  height: 28px;
+  background-image: url(/quizEnd/title_quizend.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: blink 1.2s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

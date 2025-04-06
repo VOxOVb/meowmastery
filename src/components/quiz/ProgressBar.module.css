@@ -27,7 +27,7 @@
   box-sizing: content-box;
   position: absolute;
   height: inherit;
-  border: solid 0.15rem transparent;
+  border: solid 0.15rem var(--highline-color-40);
   border-radius: 1rem 0 0 1rem;
   background-color: var(--highline-color);
   transition: width 0.7s ease-in-out;

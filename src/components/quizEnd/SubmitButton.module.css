@@ -1,0 +1,22 @@
+.SubmitButton {
+  height: 46px;
+  width: 147px;
+  @media only screen and (min-width: 576px) {
+    height: 79px;
+    width: 234px;
+    transition: transform 0.2s;
+  }
+  margin-bottom: 1rem;
+  background: url(/quizEnd/btn_result.png) no-repeat;
+  background-size: 100%;
+  animation: blink 4s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: background 0.2s;
+  &:hover {
+    background: url(/quizEnd/btn_result_hover.png) no-repeat;
+    background-size: 100%;
+  }
+  &:active {
+    background: url(/quizEnd/btn_result_active.png) no-repeat;
+    background-size: 100%;
+  }
+}

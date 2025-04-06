@@ -1,0 +1,90 @@
+.PhotoPicker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  @media only screen and (min-width: 576px) {
+    gap: 18px;
+  }
+}
+
+.btnPrev,
+.btnNext {
+  width: 48px;
+  height: 48px;
+  pointer-events: painted;
+}
+
+.btnPrev {
+  background: url(/quizEnd/btn_prev.png) no-repeat;
+  background-size: 100%;
+}
+.btnNext {
+  background: url(/quizEnd/btn_next.png) no-repeat;
+  background-size: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .btnNext:hover {
+    background: url(/quizEnd/btn_next_hover.png) no-repeat;
+    background-size: 100%;
+  }
+  .btnPrev:hover {
+    background: url(/quizEnd/btn_prev_hover.png) no-repeat;
+    background-size: 100%;
+  }
+}
+
+.btnNext:active {
+  touch-action: manipulation;
+  background: url(/quizEnd/btn_next_active.png) no-repeat;
+  background-size: 100%;
+}
+.btnPrev:active {
+  touch-action: manipulation;
+  background: url(/quizEnd/btn_prev_active.png) no-repeat;
+  background-size: 100%;
+}
+
+.photoBorder {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  @media only screen and (min-width: 576px) {
+    width: 240px;
+    height: 240px;
+  }
+  background: url(/quizEnd/img_border.png) no-repeat;
+  background-size: 100%;
+}
+.photoList {
+  position: relative;
+  z-index: -1;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  border-radius: 50%;
+  background: url(/quizEnd/photo-list.png) no-repeat;
+  background-size: cover;
+}
+.photo {
+  position: relative;
+  z-index: -1;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  border-radius: 50%;
+  > img {
+    height: 100%;
+    background-size: cover;
+  }
+}
+.upload {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  width: inherit;
+  height: inherit;
+  opacity: 0;
+  cursor: pointer;
+}

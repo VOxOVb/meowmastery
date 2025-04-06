@@ -1,0 +1,31 @@
+.InputField {
+  width: 246px;
+  height: 47px;
+  @media only screen and (min-width: 576px) {
+    margin-top: 2rem;
+    width: 365px;
+    height: 72px;
+  }
+  border-radius: 32px;
+  background-color: var(--primary-color);
+  background-image: url(/quizEnd/input_border.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.text {
+  cursor: pointer;
+  margin-top: 5px;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.8rem;
+  @media only screen and (min-width: 576px) {
+    margin-top: 0;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    line-height: 1.8rem;
+  }
+}

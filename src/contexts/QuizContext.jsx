@@ -7,6 +7,9 @@ const initialState = {
   questions: [],
   index: 0,
   answers: [],
+  selectedPhoto: 0,
+  uploaded: null,
+  nickname: "",
 };
 
 function reducer(state, action) {
@@ -28,17 +31,40 @@ function reducer(state, action) {
         ...state,
         status: "quizEnd",
       };
+    case "select":
+      return {
+        ...state,
+        selectedPhoto: state.selectedPhoto + action.payload,
+      };
+    case "upload":
+      return {
+        ...state,
+        uploaded: action.payload,
+      };
+    case "nickname":
+      return { ...state, nickname: action.payload };
+    case "result":
+      return { ...state, status: "result" };
   }
 }
 
 function QuizProvider({ children }) {
-  const [{ status, questions, index, answers }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [
+    { status, questions, index, answers, selectedPhoto, nickname, uploaded },
+    dispatch,
+  ] = useReducer(reducer, initialState);
   return (
     <QuizContext.Provider
-      value={{ status, questions, index, answers, dispatch }}
+      value={{
+        status,
+        questions,
+        index,
+        answers,
+        dispatch,
+        selectedPhoto,
+        nickname,
+        uploaded,
+      }}
     >
       {children}
     </QuizContext.Provider>
